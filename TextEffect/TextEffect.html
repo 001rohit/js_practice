@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height:100vh;
+            background: #000;
+            overflow: hidden;
+        }
+        /* .container{
+
+        } */
+        .container .text{
+           position: relative;
+           color:#4070F4;
+           font-size:30px;
+           font-weight: 600;
+        }
+        .container .first-text{
+            color: #fff;
+        }
+        .text.sec-text:before{
+            content:"";
+            position: absolute;
+            top: 0;
+            left: 0;
+            height:100%;
+            width:100%;
+            background-color: #000;
+            border-left:2px solid #4070F4;
+            animation:animate 4s steps(12) infinite;
+        }
+        @keyframes animate {
+            40%,60%{
+                left:100%;
+            }
+            100%{
+                left:0%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <span class="text first-text">I'm a</span>
+        <span class="text sec-text">Freelancer</span>
+    </div>
+    <script>
+          const text = document.querySelector(".sec-text")
+
+          function runfunction(){
+             setTimeout(()=>{
+                text.textContent = "Freelancer";
+             },0);
+             setTimeout(()=>{
+                text.textContent = "Blogger";
+             },4000)
+             setTimeout(()=>{
+                text.textContent = "YouTuber";
+             },8000);
+             setTimeout(()=>{
+                text.textContent = "Writer";
+             },12000);
+          }
+          runfunction()
+          setInterval(runfunction,16000);
+    </script>
+</body>
+</html>
