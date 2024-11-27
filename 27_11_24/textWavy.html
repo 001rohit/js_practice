@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #000;
+            min-height:100vh;
+        }
+        .text-contain{
+            position: relative;
+            -webkit-box-reflect: below -12px linear-gradient(transparent,rgba(0,0,0,0.2));
+        }
+        .text-contain span{
+            color: #ffffff;
+            font-size:3rem;
+            display: inline-block;
+            position: relative;
+            filter:drop-shadow(0 5px 10px #fff);
+            animation:animate 2s ease-in-out infinite;
+            animation-delay: calc(0.1s*var(--i));
+        }
+        @keyframes animate {
+             0%{
+                transform: translateY(0px) ;
+            }
+            20%{
+                 transform: translateY(-20px);
+             }
+        }
+
+    </style>
+</head>
+<body>
+         <div class="text-contain">
+            <span style="--i:0">R</span>
+            <span style="--i:1">O</span>
+            <span style="--i:2">H</span>
+            <span style="--i:3">I</span>
+            <span style="--i:4">T</span>
+         </div>
+</body>
+</html>
