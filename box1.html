@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height:100vh;
+        }
+        .box{
+            width:650px;
+            /* height:200px; */
+            /* background: brown; */
+            display: flex;
+            /* align-items: center; */
+            flex-wrap: wrap;
+            background: yellow;
+
+        }
+        .circle{
+            width:55px;
+            height:55px;
+            margin: 10px;
+            border-radius: 50%;
+            /* background: brown; */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.5s linear;
+            font-size:3rem;
+            border:1px solid black;
+            padding: 6px;
+            background: #000;
+            flex-direction: column;
+            
+        }
+        .circle:hover{
+            background: cyan;
+        }
+        @media screen and (max-width:620px) {
+            body{
+                background: #000;
+            }
+            .box{
+                width:300px;
+            background: yellow;
+            }
+        }
+
+    </style>
+</head>
+<body>
+      <div class="container">
+        <div class="box">
+        </div>
+      </div>
+      <script>
+        let box = document.querySelector('.box')
+        let list = ['🙂','🙂','😉','🫡','🤗','😫','😆','😊','🤔','😤','😍','🤑','🥵']
+        for(let i=0;i<list.length;i++){
+            let div = document.createElement('div')
+            div.className ='circle'
+            div.innerHTML = `${list[i]}`
+            box.appendChild(div)
+        }
+      </script>
+</body>
+</html>
