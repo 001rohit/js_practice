@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            flex-direction: column;
+        }
+        .box{
+            width:360px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #000;
+        }
+        .contain,.contain1{
+            text-align: center;
+            color: white;
+            float: left;
+            margin: 0 10px
+        }
+
+    </style>
+</head>
+<body>
+    <div class="input-box">
+        <label for="val">Ente Value</label>
+        <input type="text" id="val" class="val1">
+        <button onclick="checkRes()">submit</button>
+    </div>
+          <div class="box">
+            <div class="contain">
+            </div>
+            <div class="contain1">
+            </div>
+          </div>
+        <script>
+            let contain = document.querySelector('.contain1')
+            let contain1 = document.querySelector('.val1')
+           
+            function checkRes(){
+ 
+                    contain1= contain1.value
+                for(let i=contain1;i<=contain1;i++){
+                console.log(i);
+                for(let j=1;j<=10;j++){
+                    let div = document.createElement('div')
+                    div.innerHTML =`${i}*${j} = ${i*j}`
+                    contain.appendChild(div)
+                }
+            }
+            }
+            
+        </script>
+</body>
+</html>
