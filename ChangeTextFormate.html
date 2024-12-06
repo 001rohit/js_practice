@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+        .box{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        .displayBox{
+            width:320px;
+            height:350px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid black;
+        }
+        .displayBox p{
+            font-size:2.5rem;
+            text-transform: capitalize;
+        }
+        .btn{
+            width:350px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 5px;
+        }
+        .btn button{
+            padding: 10px;
+            font-size:20px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        .inputBox input{
+            width:300px;
+            font-size:20px;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 50px;
+        }
+    </style>
+</head>
+<body>
+        <div class="box">
+            <h1>Input Text Transform</h1>
+            <div class="inputBox">
+                <input type="text" id="value">
+            </div>
+
+            <div class="displayBox">
+                <p  id="showText"></p>
+            </div>
+            <div class="btn">
+                <button id="btn1">Text Bolt</button>
+                <button id="btn2">Text Italic</button>
+                <button id="btn3">Text underline</button>
+                <button id="btn4">Text mark</button>
+                <button id="btn5">Text delete</button>
+                <button id="btn6">Simple Text</button>
+            </div>
+        </div>
+        <script>
+            let btn1 = document.getElementById('btn1')
+            let btn2 = document.getElementById('btn2')
+            let btn3 = document.getElementById('btn3')
+            let value1 = document.getElementById('value')
+            let showText = document.querySelector('#showText')
+            let val=0
+            btn1.addEventListener('click',function(){
+                    console.log(value1.value);
+                    let show1 = value1.value
+                    showText.innerHTML = `<b>${show1}</b>`
+            })
+            btn2.addEventListener('click',function(){
+                    console.log(value1.value);
+                    let show1 = value1.value
+                    showText.innerHTML = `<i>${show1}</i>`
+            })
+            btn3.addEventListener('click',function(){
+                    console.log(value1.value);
+                    let show1 = value1.value
+                    showText.innerHTML = `<u>${show1}</u>`
+            })
+            btn4.addEventListener('click',function(){
+                    console.log(value1.value);
+                    let show1 = value1.value
+                    showText.innerHTML = `<mark>${show1}</mark>`
+            })
+            btn5.addEventListener('click',function(){
+                    console.log(value1.value);
+                    let show1 = value1.value
+                    showText.innerHTML = `<del>${show1}</del>`
+            })
+            btn6.addEventListener('click',function(){
+                    console.log(value1.value);
+                    let show1 = value1.value
+                    showText.innerHTML = show1
+            })
+        </script>
+</body>
+</html>
